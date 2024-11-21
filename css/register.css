@@ -1,0 +1,22 @@
+@import url("default.css");
+
+input{
+    width: 70%;
+    margin: 3px;
+    height: 3em;
+}
+.box{
+    border: 1px black; 
+    width: 20%;
+    padding: 3rem;
+    background-color: beige; 
+    border-radius: 20%;
+}
+.HR_area{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 10%;
+
+
+}
