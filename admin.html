@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style_admin.css" />
+  <title>Login do Administrador</title>
+  <script src="scripts/admin.js" defer></script>
+</head>
+
+<body onload="showInfoPage()">
+  <div class="check-in-page">
+    <div class="card">
+      <div class="card-left">
+        <img class="logo" src="img/logo.png" alt="Logo" onclick="window.location.href='home.html'" />
+        <div class="menu">
+          <button class="menu-item" onclick="navigateTo('register-page')">Registro de funcionários</button>
+          <button class="menu-item" onclick="navigateTo('all-employees-page')">Todos os funcionários</button>
+          <button class="menu-item" onclick="navigateTo('employee-history-page')">Histórico de funcionário</button>
+          <button class="menu-item">Login do administrador</button>
+        </div>
+        <button class="menu-item logout" onclick="navigateTo('home-page')">Sair</button>
+        <div class="footer-container">
+          <p class="footer-text">
+            Desenvolvido por Helius<br />
+            2024 © Todos os direitos reservados
+          </p>
+        </div>
+      </div>
+      <div class="card-right">
+        <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+        <div id="info-page">
+          <h1 class="title">Informações de login do administrador</h1>
+          <p id="current-user" class="info-text"></p>
+          <p id="current-password" class="info-text"></p>
+          <button class="button" onclick="showUpdatePage()">Mudar login/senha</button>
+        </div>
+        <div id="update-page" class="hidden">
+          <h1 class="title">Atualizar informações de login</h1>
+          <div class="input-container">
+            <input id="new-user" class="input" type="text" placeholder="Novo usuário" />
+          </div>
+          <div class="input-container">
+            <input id="new-password" class="input" type="password" placeholder="Nova senha" />
+          </div>
+          <button class="button" onclick="updateCredentials()">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

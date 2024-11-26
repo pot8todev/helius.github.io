@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_sms.css" />
+    <title>Digite o código</title>
+    <script src="scripts/sms.js" defer></script>
+  </head>
+  <body>
+    <div class="check-in-page">
+      <div class="card">
+        <div class="card-left">
+          <img class="logo" src="img/logo.png" alt="Logo" />
+          <div class="footer-container">
+            <p class="footer-text">
+              Desenvolvido por Helius<br />
+              2024 © Todos os direitos reservados
+            </p>
+          </div>
+        </div>
+        <div class="card-right">
+          <h1 class="title">Digite o código enviado por SMS</h1>
+          <div class="input-container">
+            <input id="sms-code" class="input" type="text" placeholder="------" />
+          </div>
+          <a href="#" class="admin-link">Reenviar o código</a>
+          <button class="button" onclick="goToConfirmation()">Ok</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

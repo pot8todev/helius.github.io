@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_todos.css" />
+    <title>Todos os Funcionários</title>
+    <script src="scripts/todos.js" defer></script>
+  </head>
+  <body>
+    <div class="check-in-page">
+      <div class="card">
+        <div class="card-left">
+          <img class="logo" src="img/logo.png" alt="Logo" onclick="window.location.href='home.html'" />
+          <div class="menu">
+            <button class="menu-item" onclick="window.location.href='registro.html'">Registro de funcionários</button>
+            <button class="menu-item" onclick="window.location.href='todos.html'">Todos os funcionários</button>
+            <button class="menu-item" onclick="window.location.href='historico.html'">Histórico de funcionário</button>
+            <button class="menu-item" onclick="window.location.href='admin.html'">Login do administrador</button>
+          </div>
+          <button class="menu-item logout" onclick="window.location.href='index.html'">Sair</button>
+          <div class="footer-container">
+            <p class="footer-text">
+              Desenvolvido por Helius<br />
+              2024 © Todos os direitos reservados
+            </p>
+          </div>
+        </div>
+        <div class="card-right">
+          <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+          <h1 class="title">Todos os Funcionários</h1>
+          <div class="input-container">
+            <input class="input" type="text" placeholder="Pesquisar por ID ou Nome" />
+            <button class="button">🔍</button>
+          </div>
+          <table class="employees-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Setor</th>
+                <th>E-mail</th>
+                <th>Celular</th>
+                <th>Histórico</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ab123</td>
+                <td>João Galvero</td>
+                <td>Financeiro</td>
+                <td>joao@email.com</td>
+                <td>(21) 99999-9999</td>
+                <td><a href="#" onclick="navigateToHistory()">Ver</a></td>
+              </tr>
+              <tr>
+                <td>cd456</td>
+                <td>Emanuelle Meireles</td>
+                <td>RH</td>
+                <td>maria@email.com</td>
+                <td>(21) 88888-8888</td>
+                <td><a href="#" onclick="navigateToHistory()">Ver</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style_registro.css" />
+  <title>Registro de Funcionário</title>
+  <script src="scripts/registro.js" defer></script>
+</head>
+
+<body>
+  <div class="check-in-page">
+    <div class="card">
+      <div class="card-left">
+        <img class="logo" src="img/logo.png" alt="Logo" onclick="window.location.href='home.html'" />
+        <div class="menu">
+          <button class="menu-item">Registro de funcionários</button>
+          <button class="menu-item" onclick="navigateTo('all-employees-page')">Todos os funcionários</button>
+          <button class="menu-item" onclick="navigateTo('employee-history-page')">Histórico de funcionário</button>
+          <button class="menu-item" onclick="navigateTo('admin-page')">Login do administrador</button>
+        </div>
+        <button class="menu-item logout" onclick="navigateTo('home-page')">Sair</button>
+        <div class="footer-container">
+          <p class="footer-text">
+            Desenvolvido por Helius<br />
+            2024 © Todos os direitos reservados
+          </p>
+        </div>
+      </div>
+      <div class="card-right">
+        <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+        <div id="register-form">
+          <h1 class="title">Registro de funcionário</h1>
+          <div class="input-container">
+            <input class="input" type="text" placeholder="Nome" />
+          </div>
+          <div class="input-container">
+            <input class="input" type="text" placeholder="Setor" />
+          </div>
+          <div class="input-container">
+            <input class="input" type="email" placeholder="E-mail" />
+          </div>
+          <div class="input-container">
+            <input class="input" type="text" placeholder="Celular" />
+          </div>
+          <button class="button" onclick="generateEmployeeID()">Cadastrar</button>
+        </div>
+        <div id="confirmation" class="hidden">
+          <p id="generated-id" class="confirmation-text"></p>
+          <button class="button" onclick="resetForm()">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
