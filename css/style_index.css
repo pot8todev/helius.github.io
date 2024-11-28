@@ -1,12 +1,26 @@
+@charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*Adicionado: Variáveis Globais p/Cor*/
+:root {
+  --cor-fundo: #51735a; /*Cor: Fundo da Página*/
+  --cor-card-sombra: rgba(0, 0, 0, 0.1);
+  --cor-menu: #a8d3b1; /*Cor: Menu Lateral (Na esquerda)*/
+  --cor-menu-sombra: rgba(0, 0, 0, 0.25); /*Cor: Sombra do Menu Lateral*/
+  --cor-input: #51735a; /*Cor: Input (A barra abaixo do campo de inserir texto) [NÃO-PRESSIONADO]*/
+  --cor-botao: #51735a; /*Cor: Botão [NÃO-PRESSIONADO]*/
+  --cor-botao-pressionado: #3a5945; /*Cor: Botão [PRESSIONADO]*/
+  --cor-textos: #1e1e1e; /*Cor: Textos comuns da página*/
+}
+
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #51735a;
+  background-color: var(--cor-fundo);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,22 +32,22 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 16px; /*Alteração: 20px -> 16px*/
 }
 
 .card {
   display: flex;
   background-color: #fff;
   border-radius: 34px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 928px;
+  box-shadow: 0px 4px 20px var(--cor-card-sombra);
+  max-width: 1550px; /*Alteração: 928px --> 1550px*/
   width: 100%;
-  min-height: 500px;
+  min-height: 720px; /*Alteração: 500px --> 720px*/
   overflow: hidden;
 }
 
 .card-left {
-  background-color: #a8d3b1;
+  background-color: var(--cor-menu);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -41,13 +55,15 @@ body {
   align-items: center;
   padding: 20px;
   border-radius: 34px; 
-  box-shadow: 15px 4px 46px rgba(0, 0, 0, 0.25); 
+  box-shadow: 15px 4px 46px var(--cor-menu-sombra); 
 }
 
-.card-left .logo {
-  width: 180px;
+/*Alteração: Responsividade da Imagem*/
+.card-left img {
+  max-width: 100%;
   height: auto;
-  margin-top: 20px; 
+  display: block;
+  object-fit: contain;
 }
 
 .footer-container {
@@ -57,7 +73,7 @@ body {
 
 .footer-text {
   font-size: 14px;
-  color: #1e1e1e;
+  color: var(--cor-textos);
 }
 
 .card-right {
@@ -71,7 +87,7 @@ body {
 
 .title {
   font-size: 32px;
-  color: #1e1e1e;
+  color: var(--cor-textos);
   margin-bottom: 20px;
 }
 
@@ -85,11 +101,11 @@ body {
 .input {
   width: 100%;
   border: none;
-  border-bottom: 2px solid #51735a;
+  border-bottom: 2px solid var(--cor-input);
   outline: none;
   font-size: 16px;
   padding: 10px 0;
-  color: #1e1e1e;
+  color: var(--cor-textos);
 }
 
 .input::placeholder {
@@ -119,7 +135,7 @@ body {
 }
 
 .button {
-  background-color: #51735a;
+  background-color: var(--cor-botao);
   color: #fff;
   font-size: 18px;
   padding: 10px 20px;
@@ -130,7 +146,7 @@ body {
 }
 
 .button:hover {
-  background-color: #3a5945;
+  background-color: var(--cor-botao-pressionado);
   transform: scale(1.05);
 }
 
