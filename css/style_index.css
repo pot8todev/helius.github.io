@@ -129,7 +129,7 @@ body {
   cursor: pointer;
   transition: color 0.3s;
 }
-
+ 
 .admin-link:hover {
   color: #3a5945;
 }

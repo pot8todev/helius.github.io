@@ -34,7 +34,7 @@ body {
   width: 100%;
   padding: 16px; /*Alteração: 20px -> 16px*/
 }
-  
+   
 .card {
   display: flex;
   background-color: #fff;

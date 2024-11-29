@@ -146,7 +146,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
-  
+   
 .button:hover {
   background-color: var(--cor-botao-pressionado);
   transform: scale(1.05);

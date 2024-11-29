@@ -95,7 +95,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
   width: 90%;
 }
-  
+   
 .menu-item.logout {
   margin-top: 13px; /*Alterado: auto --> 13px*/
   margin-bottom: auto; /*Alterado: 2px --> auto*/
