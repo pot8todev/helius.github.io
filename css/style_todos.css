@@ -1,15 +1,14 @@
 @charset "UTF-8";
 
-/*Adicionado: Variáveis Globais p/Cor*/
 :root {
-  --cor-fundo: #51735a; /*Cor: Fundo da Página*/
+  --cor-fundo: #51735a;
   --cor-card-sombra: rgba(0, 0, 0, 0.1);
-  --cor-menu: #a8d3b1; /*Cor: Menu Lateral (Na esquerda)*/
-  --cor-menu-sombra: rgba(0, 0, 0, 0.25); /*Cor: Sombra do Menu Lateral*/
-  --cor-input: #51735a; /*Cor: Input (A barra abaixo do campo de inserir texto) [NÃO-PRESSIONADO]*/
-  --cor-botao: #51735a; /*Cor: Botão [NÃO-PRESSIONADO]*/
-  --cor-botao-pressionado: #3a5945; /*Cor: Botão [PRESSIONADO]*/
-  --cor-textos: #1e1e1e; /*Cor: Textos comuns da página*/
+  --cor-menu: #a8d3b1;
+  --cor-menu-sombra: rgba(0, 0, 0, 0.25);
+  --cor-input: #51735a;
+  --cor-botao: #51735a;
+  --cor-botao-pressionado: #3a5945;
+  --cor-textos: #1e1e1e;
 }
 
 * {
@@ -32,7 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 16px; /*Alteração: 20px -> 16px*/
+  padding: 16px;
 }
   
 .card {
@@ -40,9 +39,9 @@ body {
   background-color: #fff;
   border-radius: 34px;
   box-shadow: 0px 4px 20px var(--cor-card-sombra);
-  max-width: 1550px; /*Alteração: 928px --> 1550px*/
+  max-width: 1550px;
   width: 100%;
-  min-height: 720px; /*Alteração: 500px --> 720px*/
+  min-height: 650px; /*Alteração: 720px --> 650px*/
   overflow: hidden;
   position: relative;
 }
@@ -59,12 +58,16 @@ body {
   box-shadow: 15px 4px 46px var(--cor-menu-sombra);
 }
  
-/*Alteração: Responsividade da Imagem*/
 .card-left img {
   max-width: 100%;
   height: auto;
   display: block;
   object-fit: contain;
+}
+
+/*Alteração: Função para aparecer mãozinha sobre logo da Horizon*/
+img:hover {
+  cursor: pointer;
 }
 
 .card-left.hidden {
@@ -77,15 +80,15 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 65px; /*Alteração: 20px -> 60px*/
+  margin-top: 45px; /*Alteração: 65px -> 45px*/
 }
 
 .menu-item {
   background-color: transparent;
-  border: -3px; /*Alteração: 0px -> -3px*/
-  border-color:  #51735a70; /*Adicionado: Borda colorida pros botões*/
-  border-radius: 24px; /*Adicionado: Arredondamento dos botões*/
-  margin: 2px; /*Adicionado: Distancia entre os botões*/
+  border: -3px;
+  border-color:  transparent; /*Alterado: Removido cor de borda*/
+  border-radius: 24px;
+  margin: 2px;
   font-size: 16px;
   color: #51735a;
   text-align: center;
@@ -94,13 +97,14 @@ body {
   transition: background-color 0.3s, color 0.3s;
   width: 90%;
 }
-  
+   
 .menu-item.logout {
-  margin-top: 13px; /*Alterado: auto --> 13px*/
-  margin-bottom: auto; /*Alterado: 2px --> auto*/
+  margin-top: 13px;
+  margin-bottom: auto;
 }
   
 .menu-item:hover {
+  border-color:  #51735a70; /*Alterado: Adicionado cor de borda*/
   background-color: var(--cor-botao-pressionado);
   color: #fff;
 }
@@ -168,7 +172,16 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-  
+
+/*Alterado: Tamanho da lupa*/
+#Lupa img {
+  max-width: 18px;
+}
+
+.button:hover {
+  background-color: var(--cor-botao-pressionado);
+}
+
 .employees-table {
   width: 100%;
   border-collapse: collapse;
