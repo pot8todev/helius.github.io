@@ -1,3 +1,4 @@
+@import url(default.css);
 * {
   margin: 0;
   padding: 0;
@@ -64,27 +65,14 @@ body {
   margin-top: 20px;
 }
 
-.menu-item {
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  color: #51735a;
-  text-align: center;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  width: 90%;
-}
+
 
 .menu-item.logout {
   margin-top: auto; 
   margin-bottom: 20px; 
 }
 
-.menu-item:hover {
-  background-color: #51735a;
-  color: #fff;
-}
+
 
 .footer-container {
   text-align: center;
